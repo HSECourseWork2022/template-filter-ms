@@ -10,6 +10,8 @@ Ready to kick-start Spring Boot application template filter with Dockerfile and 
 4. Update `docker-compose.yml`
    1. Change application service name `template-filter` to `{{ sourcename }}-{{ filtername }}-filter`
    2. Change container name `template-filter-container` to `{{ sourcename }}-{{ filtername }}-filter-container`
+   3. Change `INCOME_TOPIC` to your `sourcename.subtheme.producers.outcome`
+   4. Change `OUTPUT_TOPIC` to your `sourcename.subtheme.filters.outcome`
 
 ```bash
 ./mvnw clean
