@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class KafkaProducerService {
 
-    @Value("${output.topic}")
+    @Value("${filter.source}.${filter.subtheme}.filters.outcome")
     private String outputTopic;
     private final KafkaTemplate<String, TemplateFiltered> kafkaTemplate;
 

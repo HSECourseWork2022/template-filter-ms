@@ -15,8 +15,8 @@ services:
     environment:
       - SPRING_KAFKA_BOOTSTRAP-SERVERS=kafka:9092
       - SPRING_KAFKA_CONSUMER_GROUP-ID=template-filters
-      - INCOME_TOPIC=sourcename.subtheme.producers.outcome
-      - OUTPUT_TOPIC=sourcename.subtheme.filters.outcome
+      - FILTER_SOURCE=template-source
+      - FILTER_SUBTHEME=template-theme
     depends_on:
       - kafka
 

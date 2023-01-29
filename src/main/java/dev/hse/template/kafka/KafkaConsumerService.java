@@ -14,7 +14,7 @@ public class KafkaConsumerService {
 
     private final ProcessingService processingService;
 
-    @KafkaListener(topics = "${income.topic}")
+    @KafkaListener(topics = "${filter.source}.${filter.subtheme}.producers.outcome")
     public void consume(TemplateRaw templateRaw) {
         log.info("Got from kafka: {} ", templateRaw);
         processingService.process(templateRaw);
